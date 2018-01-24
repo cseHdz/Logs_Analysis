@@ -1,7 +1,7 @@
 
 --
 -- Name: article_popularity; Type: VIEW; Schema: public;
--- Join articles and log tables by artciles.slug
+-- Join articles and log tables by articles.slug
 --
 
 CREATE VIEW article_popularity as
