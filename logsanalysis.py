@@ -14,7 +14,7 @@ def main():
 
 
 def articles_analysis():
-    print ("\nMost popular articles:\n")
+    print("\nMost popular articles:\n")
     results = get_popular_articles()
 
     for record in results:
@@ -22,7 +22,7 @@ def articles_analysis():
 
 
 def authors_analysis():
-    print ("\nMost popular authors:\n")
+    print("\nMost popular authors:\n")
     results = get_popular_authors()
 
     for record in results:
@@ -30,12 +30,12 @@ def authors_analysis():
 
 
 def errors_analysis():
-    print ("\nDays with more than 1% errors:\n")
+    print("\nDays with more than 1% errors:\n")
     results = get_errors()
 
     for record in results:
-        print ("{:%b %d, %Y}".format(record[0]) + " - " +
-               "{0:.1f}%".format(record[1]*100) + " errors")
+        print("{:%b %d, %Y}".format(record[0]) + " - " +
+              "{0:.1f}%".format(record[1]*100) + " errors")
 
 
 main()
