@@ -2,8 +2,11 @@
 
 ## Requirements
 Database: news - Data can be found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+
 Interpreter: Python 2 or Python 3
+
 Libraries: psycopg2
+
 An environment running PostgreSQL
 
 This project was created using a VirtualBox/Vagrant with Ubuntu 16.04.3 LTS.
