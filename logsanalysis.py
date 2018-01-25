@@ -1,5 +1,4 @@
-
-# !/usr/bin/env python 2.7
+#! /usr/bin/env python
 
 # Logs analysis
 
@@ -14,28 +13,31 @@ def main():
 
 
 def articles_analysis():
+    """ List the most popular articles by number of views"""
     print("\nMost popular articles:\n")
     results = get_popular_articles()
 
-    for record in results:
-        print '"{}"'.format(record[0]) + " - " + str(record[1])
+    for title, views in results:
+        print '"{}"'.format(title) + " - " + str(views)
 
 
 def authors_analysis():
+    """ List the most popular authors by number of views"""
     print("\nMost popular authors:\n")
     results = get_popular_authors()
 
-    for record in results:
-        print record[0] + " - " + str(record[1])
+    for author, views in results:
+        print author + " - " + str(views)
 
 
 def errors_analysis():
+    """ List all days with more than 1% errors"""
     print("\nDays with more than 1% errors:\n")
     results = get_errors()
 
-    for record in results:
-        print("{:%b %d, %Y}".format(record[0]) + " - " +
-              "{0:.1f}%".format(record[1]*100) + " errors")
+    for date, percentage in results:
+        print("{:%b %d, %Y}".format(date) + " - " +
+              "{0:.1%}".format(percentage) + " errors")
 
 
 main()
