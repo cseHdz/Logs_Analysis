@@ -52,7 +52,7 @@ left join
   authors on articles.author = authors.id
 group by authors.name;
 ```
-### 2. request_proportions
+### 3. request_proportions
 Calculate percentage of total for each request on each day
 ```sql
 create view request_proportions as
