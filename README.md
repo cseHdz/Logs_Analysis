@@ -1,8 +1,25 @@
 # Logs_Analysis
-Logs Analysis Project
 
+## Requirements
+Database: news - Data can be found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+Interpreter: Python 2 or Python 3
+Libraries: psycopg2
+An environment running PostgreSQL
+
+This project was created using a VirtualBox/Vagrant with Ubuntu 16.04.3 LTS.
+
+## Overview
 This repository covers the requirements for Udacity - Full Stack Web Development Project 3.
-To run this project run `loganalysis.py` on Terminal.
+
+The project performs the following tasks:
+1. List the three most popular articles (sorted by views)
+2. List the three most popular authors (sorted by views)
+3. List all the dates with a request error rate greater than 1%
+
+To run this project:
+- Load the data to the database by running: `psql -d news -f newsdata.sql`
+- Run `psql -d news -f logs_views.sql` to create the views
+- Run `loganalysis.py` with the line `./logsanalysis.py` or `python logsanalysis.py`
 
 ## Views used for Log Analysis
 
